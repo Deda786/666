@@ -1,0 +1,169 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* CONTAINER */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* HEADER */
+header {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+header img {
+  width: 100%;
+  height: 60vh;
+  object-fit: cover;
+  display: block;
+}
+
+header .container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+header h1 {
+  font-size: 3rem;
+}
+
+header h2 {
+  font-size: 1.8rem;
+  margin: 10px 0;
+}
+
+header p {
+  margin-bottom: 20px;
+}
+
+/* NAV */
+nav {
+  margin-top: 15px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  margin: 0 10px;
+  font-weight: bold;
+  padding: 5px 10px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  background-color: rgba(255,255,255,0.2);
+  border-radius: 5px;
+}
+
+/* SECTIONS */
+section {
+  padding: 60px 0;
+}
+
+.bila {
+  background: white;
+}
+
+.tmava {
+  background: #2f3e46;
+  color: white;
+}
+
+.tmava h2 {
+  color: #ffd166;
+}
+
+/* ARTICLES */
+article {
+  margin-bottom: 30px;
+}
+
+article h2 {
+  margin-bottom: 15px;
+}
+
+/* GALLERY */
+.gallery {
+  display: grid;
+  gap: 20px;
+}
+
+.gallery img {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+/* FOOTER */
+footer {
+  background: #1b262c;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* ========================= */
+/* RESPONSIVE DESIGN */
+/* ========================= */
+
+/* TABLET */
+@media (min-width: 768px) {
+
+  .tmava .container {
+    display: flex;
+    gap: 40px;
+  }
+
+  .tmava article {
+    flex: 1;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  header h1 {
+    font-size: 4rem;
+  }
+}
+
+/* DESKTOP */
+@media (min-width: 1024px) {
+
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  header img {
+    height: 75vh;
+  }
+
+  header h1 {
+    font-size: 5rem;
+  }
+
+  nav a {
+    font-size: 1.1rem;
+  }
+}
